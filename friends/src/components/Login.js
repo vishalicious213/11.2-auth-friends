@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const Login = () => {
-    const [name, setName] = useState('');
+    const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
-    const updateName = event => {
-        setName(event.target.value);
+    const updateUsername = event => {
+        setUsername(event.target.value);
     }
     
     const updatePassword = event => {
@@ -14,6 +15,12 @@ const Login = () => {
 
     const submitLogin = event => {
         event.preventDefault();
+        axios
+            .post('http://localhost:5000/api/login', { username: 'Lambda School', password: 'i<3Lambd4' })
+            .then(results => {
+                console.log('Results: ', results.data);
+            })
+            .catch(error => console.log('Login error: ', error));
         // go to friends list or login again
     }
 
@@ -21,7 +28,7 @@ const Login = () => {
         <section className='login-page'>
             <div>Login</div>
             <form onSubmit={submitLogin}>
-                <input type='text' name='name' placeholder='Username' value={name} onChange={updateName} />
+                <input type='text' name='username' placeholder='Username' value={username} onChange={updateUsername} />
                 <input type='password' name='password' placeholder='Password' value={password} onChange={updatePassword} />
                 <button>Login</button>
             </form>
