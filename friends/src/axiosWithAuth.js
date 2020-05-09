@@ -1,0 +1,16 @@
+import axios from 'axios';
+
+export const axiosWithAuth = () => {
+    const token = localStorage.getItem('token');
+
+    return axios.create({
+        headers: {
+            Authorization: token,
+        },
+    })
+}
+
+// We are going to create an Axios configuration that attaches an 
+// Authorization: <token> header to requests. Whenever the app needs 
+// to exchange data with a protected endpoint, it imports this module, 
+// instead of the usual import axios from "axios";.

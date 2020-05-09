@@ -19,6 +19,7 @@ const Login = () => {
             .post('http://localhost:5000/api/login', { username: 'Lambda School', password: 'i<3Lambd4' })
             .then(results => {
                 console.log('Results: ', results.data);
+                localStorage.setItem('token', results.data.token);
             })
             .catch(error => console.log('Login error: ', error));
         // go to friends list or login again
