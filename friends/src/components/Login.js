@@ -15,8 +15,9 @@ const Login = () => {
 
     const submitLogin = event => {
         event.preventDefault();
+        // console.log(username, password);
         axios
-            .post('http://localhost:5000/api/login', { username: 'Lambda School', password: 'i<3Lambd4' })
+            .post('http://localhost:5000/api/login', { username, password })
             .then(results => {
                 console.log('Results: ', results.data);
                 localStorage.setItem('token', results.data.token);
