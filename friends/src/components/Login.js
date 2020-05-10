@@ -19,12 +19,17 @@ const Login = (props) => {
         axios
             .post('http://localhost:5000/api/login', { username, password })
             .then(results => {
-                console.log('Results: ', results.data);
-                localStorage.setItem('token', results.data.token);
+                // console.log('Results: ', results.data.payload);
+                localStorage.setItem('token', results.data.payload);
+                // console.log('From Login: ', localStorage.getItem('token'));
                 // window.history.push('/friendslist');
                 props.history.push('/friendslist');
             })
-            .catch(error => console.log('Login error: ', error));
+            .catch(error => {
+                console.log('Login error: ', error);
+                setUsername('');
+                setPassword('');
+            })
         // go to friends list or login again
     }
 

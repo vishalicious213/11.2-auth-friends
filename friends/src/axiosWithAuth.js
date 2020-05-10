@@ -10,6 +10,8 @@ export const axiosWithAuth = () => {
     })
 }
 
+export default axiosWithAuth;
+
 // We are going to create an Axios configuration that attaches an 
 // Authorization: <token> header to requests. Whenever the app needs 
 // to exchange data with a protected endpoint, it imports this module, 
