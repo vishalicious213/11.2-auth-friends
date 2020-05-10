@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const Login = () => {
+const Login = (props) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
@@ -21,6 +21,8 @@ const Login = () => {
             .then(results => {
                 console.log('Results: ', results.data);
                 localStorage.setItem('token', results.data.token);
+                // window.history.push('/friendslist');
+                props.history.push('/friendslist');
             })
             .catch(error => console.log('Login error: ', error));
         // go to friends list or login again
