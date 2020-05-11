@@ -33,12 +33,15 @@ const AddFriend = (props) => {
 
     return (
         <section className='add-friend'>
-            <div>Add New Friend</div>
-            <form onSubmit={submitFriend}>
-                <input type='text' name='friendName' placeholder="Friend's Name" value={friendName} onChange={updateFriendName} />
-                <input type='number' name='friendAge' placeholder='Age' value={friendAge} onChange={updateFriendAge} />
-                <input type='text' name='friendEmail' placeholder="Friend's Email" value={friendEmail} onChange={updateFriendEmail} />
-                <button>Add Friend</button>
+            <form className='add-friend-form' onSubmit={submitFriend}>
+                <h3 className='add-friend-text new-friend-heading'>Add New Friend</h3>
+                <input className='login-input' type='text' name='friendName' placeholder="Friend's Name" value={friendName} onChange={updateFriendName} />
+                <div className='add-friend-text age-container'>
+                    <span>Age: </span>
+                    <input className='login-input age' type='number' name='friendAge' placeholder='Age' value={friendAge} onChange={updateFriendAge} />
+                </div>
+                <input className='login-input' type='text' name='friendEmail' placeholder="Friend's Email" value={friendEmail} onChange={updateFriendEmail} />
+                <button className='login-input' >Add Friend</button>
             </form>
         </section>
     )
