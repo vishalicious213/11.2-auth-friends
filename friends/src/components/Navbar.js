@@ -11,7 +11,9 @@ const Navbar = (props) => {
         <section className='navbar'>
             <div className='navbar-contents'>
                 <div className='navbar-logo-box'>
-                    <img className='navbar-logo' src={require(`./../img/friends-logo-800.png`)} alt='Friends logo'></img>
+                    <Link to='/friendslist'>
+                        <img className='navbar-logo' src={require(`./../img/friends-logo-800.png`)} alt='Friends logo'></img>
+                    </Link>
                 </div>
 
                 <div className='links'>
