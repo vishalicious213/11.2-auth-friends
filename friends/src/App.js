@@ -12,6 +12,7 @@ function App() {
     <div className="App">
       {/* <Login /> */}
       <Route exact path='/' component={Login} />
+      <Route exact path='/login' component={Login} />
       <PrivateRoute path='' component={Navbar} />
       <PrivateRoute path='/friendslist' component={FriendsList} />
       <PrivateRoute path='/addfriend' component={AddFriend} />
