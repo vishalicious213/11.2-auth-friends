@@ -3,7 +3,7 @@ import axiosWithAuth from '../axiosWithAuth';
 
 const AddFriend = (props) => {
     const [friendName, setFriendName] = useState('');
-    const [friendAge, setFriendAge] = useState(0);
+    const [friendAge, setFriendAge] = useState(0);      // if this isn't initialized, its "uncontrolled" and returns a warning
     const [friendEmail, setFriendEmail] = useState('');
 
     const updateFriendName = event => {

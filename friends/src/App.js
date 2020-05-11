@@ -5,12 +5,14 @@ import PrivateRoute from './components/PrivateRoute';
 import Login from './components/Login';
 import FriendsList from './components/FriendsList';
 import AddFriend from './components/AddFriend';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <div className="App">
       {/* <Login /> */}
       <Route exact path='/' component={Login} />
+      <PrivateRoute path='' component={Navbar} />
       <PrivateRoute path='/friendslist' component={FriendsList} />
       <PrivateRoute path='/addfriend' component={AddFriend} />
     </div>
