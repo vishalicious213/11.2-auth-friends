@@ -24,7 +24,11 @@ const FriendsList = () => {
         // console.log('in return: ', friends),
         (friends ? 
             friends.map(friend => (
-                <h3>{friend.name}</h3>
+                <div className='friend' key={friend.id}>
+                    <h3>{friend.name}</h3>
+                    <p>Age: {friend.age}</p>
+                    <p>Email: {friend.email}</p>
+                </div>
             )) : null)
         // <section className='friendslist'>
             // <div>Friends List</div>
