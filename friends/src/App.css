@@ -62,9 +62,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 90%;
+  width: 100%;
   margin-right: auto;
   margin-left: auto;
+  margin-top: .5rem;
 }
 
 .friend {
@@ -72,10 +73,17 @@
   width: 25%;
   margin: .5rem;
   padding: .5rem;
+  background: #f2f1f1;
+  border-radius: 1rem;
 }
 
 .details {
   margin: 0;
+}
+
+.deets {
+  font-size: .9rem;
+  /* font-size: calc(9px + .5vmin); */
 }
 
 /* Navbar */
@@ -130,5 +138,9 @@
 @media screen and (max-width: 768px) {
   .login-page {
     flex-direction: column-reverse;
+  }
+
+  .friend {
+    width: 42.5%;
   }
 }

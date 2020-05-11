@@ -26,9 +26,9 @@ const FriendsList = () => {
             {(friends ? 
                 friends.map(friend => (
                     <div className='friend' key={friend.id}>
-                        <h3 className='details'>{friend.name}</h3>
-                        <p className='details'>Age: {friend.age}</p>
-                        <p className='details'>Email: {friend.email}</p>
+                        <h4 className='details'>{friend.name}</h4>
+                        <p className='details deets'>Age: {friend.age}</p>
+                        <p className='details deets'>Email: {friend.email}</p>
                     </div>
                 )) : null)}
         </section>
