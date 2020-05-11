@@ -37,6 +37,7 @@ const Login = (props) => {
         <section className='login-page'>
             <div className='login-left'>
                 <img className='logo' src={require(`./../img/friends-cover.jpg`)} alt='Friends cast'></img>
+                <div className='creds'>{`name: Lambda School / pass: i<3Lambd4`}</div>
             </div>
 
             <div className='login-right'>
