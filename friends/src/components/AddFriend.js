@@ -23,7 +23,7 @@ const AddFriend = (props) => {
         axiosWithAuth()
             .post('http://localhost:5000/api/friends', { name: friendName, age: friendAge, email: friendEmail })
             .then(results => {
-                console.log('Add Friend: ', results);
+                // console.log('Add Friend: ', results);
                 props.history.push('/friendslist');
             })
             .catch(error => {

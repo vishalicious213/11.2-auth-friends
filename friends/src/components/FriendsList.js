@@ -8,7 +8,7 @@ const FriendsList = () => {
         axiosWithAuth()
             .get('http://localhost:5000/api/friends')
             .then(results => {
-                console.log('axiosWithAuth: ', results.data);
+                // console.log('axiosWithAuth: ', results.data);
                 setFriends(results.data, console.log('setFriends: ', friends));
             })
             .catch(error => {
