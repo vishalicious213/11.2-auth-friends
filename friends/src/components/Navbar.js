@@ -9,9 +9,17 @@ const Navbar = (props) => {
 
     return (
         <section className='navbar'>
-            <Link to='/friendslist' className='nav-button'>Friend's List</Link>
-            <Link to='/addfriend' className='nav-button'>Add Friend</Link>
-            <Link to='/' className='nav-button' onClick={deleteToken}>Logout</Link>
+            <div className='navbar-contents'>
+                <div className='navbar-logo-box'>
+                    <img className='navbar-logo' src={require(`./../img/friends-logo-800.png`)} alt='Friends logo'></img>
+                </div>
+
+                <div className='links'>
+                    <Link to='/friendslist' className='nav-button'>Friend's List</Link>
+                    <Link to='/addfriend' className='nav-button'>Add Friend</Link>
+                    <Link to='/' className='nav-button' onClick={deleteToken}>Logout</Link>
+                </div>
+            </div>
         </section>
     )
 }

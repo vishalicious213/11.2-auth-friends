@@ -23,14 +23,14 @@ const FriendsList = () => {
     return (
         // console.log('in return: ', friends),
         <section className='friendslist'>
-        {(friends ? 
-            friends.map(friend => (
-                <div className='friend' key={friend.id}>
-                    <h3 className='details'>{friend.name}</h3>
-                    <p className='details'>Age: {friend.age}</p>
-                    <p className='details'>Email: {friend.email}</p>
-                </div>
-            )) : null)}
+            {(friends ? 
+                friends.map(friend => (
+                    <div className='friend' key={friend.id}>
+                        <h3 className='details'>{friend.name}</h3>
+                        <p className='details'>Age: {friend.age}</p>
+                        <p className='details'>Email: {friend.email}</p>
+                    </div>
+                )) : null)}
         </section>
     )
 }

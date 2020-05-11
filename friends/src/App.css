@@ -20,7 +20,7 @@
   margin-bottom: 1rem;
   box-sizing: border-box;
   padding: 1rem;
-  background: #a6a0a1;
+  background: #f2f1f1;
   border-radius: 1rem;
 }
 
@@ -79,19 +79,50 @@
 }
 
 /* Navbar */
+
 .navbar {
-  /* border: 1px solid orange; */
+  width: 100%;
+  background: #c3bebf;
+}
+
+.navbar-contents {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.navbar-logo-box {
+  width: 10%;
+  min-width: 6rem;
+}
+
+.navbar-logo {
+  width: 100%;
+}
+
+.links {
   display: flex;
   justify-content: flex-end;
   width: 90%;
   margin-right: auto;
   margin-left: auto;
-
 }
 
 .nav-button {
+  border: 1px solid #575153;
+  border-radius: 1rem;
   margin: .5rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
   text-decoration: none;
+  color: #575153;
+}
+
+.nav-button:hover {
+  background: #575153;
+  color: white;
 }
 
 /* MOBILE */
